@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
-import { DatePipe } from '../date.pipe';
+import { DateCounterPipe } from '../date-counter.pipe';
 
 @Component({
   selector: 'app-quote-display',

@@ -1,10 +1,26 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, Input, HostListener } from '@angular/core';
+import { Quote } from './quote';
+import { QuoteDisplayComponent } from './quote-display/quote-display.component';
 
 @Directive({
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
 
-  constructor() { }
+  @Input() quote: Quote;
+
+  constructor(private elem: ElementRef) { }
+
+  @HostListener('click') onClicks() {
+    this.highlight('red');
+  }
+
+  private highlight(action: string) {
+
+    this.elem.nativeElement.style.backgroundColor = action;
+  }
+
+
+
 
 }

@@ -8,9 +8,9 @@ describe('QuoteDisplayComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuoteDisplayComponent ]
+      declarations: [QuoteDisplayComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
